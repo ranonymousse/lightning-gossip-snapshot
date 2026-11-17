@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "lnd_tag": "v0.21.4-beta",
+  "lnd_commit": "390b2d2b7bdcc335c183962e483f5daeceb8f0e7",
+  "lnd_repository": "https://github.com/lightningnetwork/lnd.git",
+  "go_release_toolchain": "go1.27.1",
+  "python": "3.12",
+  "python_dependencies": "uv.lock",
+  "bitcoin_core_version": "29.5",
+  "bitcoin_core_url": "https://bitcoincore.org/bin/bitcoin-core-{version}/",
+  "bitcoin_core_sha256": {
+    "bitcoin-29.5-x86_64-linux-gnu.tar.gz": "09a6d539c32186efc1dbda8808a70be35b8f0b44632cb51c77181d6caa0bd791",
+    "bitcoin-29.5-aarch64-linux-gnu.tar.gz": "0609695af971bc0c0303a6d44c700eeb9a53694461611bee078d5dde93c0078e"
+  }
+}

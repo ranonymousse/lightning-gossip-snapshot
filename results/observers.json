@@ -1,0 +1,53 @@
+{
+  "dataset_kind": "mainnet",
+  "note": "For each group of one observer, how many of its announcements the other observer also held, with or without a recent update of its own. An announcement that the other did not hold may have been funded after its reference block, closed in between, or never have reached it. Agreement shows that a group does not depend on one collection. It is not a network census, because both observers run the same LND selection rules on the same gossip network.",
+  "observer": {
+    "captured_at": "2026-11-13T19:27:47Z",
+    "inputs": {
+      "export_report_sha256": "4633da2cbcbefd52db3c6a4908c07a9cf76c328b07fee287168e66c26d3963d4",
+      "manifest_sha256": "dc2836ab625b0918a732950ce1e21848450eb8a3d6a2991c9123faeb998837e6",
+      "records_sha256": "2f02540111fbda01e9148f4a32b29163cce1e2e248f4bd42884a653ab01662d5"
+    },
+    "reference": {
+      "hash": "00000000000000000000cbab70bae2ddc53ee176abeb88da46efddebdb89fcf5",
+      "height": 975703
+    }
+  },
+  "observer_in_second": {
+    "no_recent_update_observed": {
+      "channels": 3285,
+      "held": 523,
+      "not_held": 2762
+    },
+    "recent_update_observed": {
+      "channels": 26529,
+      "held": 26495,
+      "not_held": 34
+    }
+  },
+  "schema_version": 1,
+  "second_in_observer": {
+    "no_recent_update_observed": {
+      "channels": 1066,
+      "held": 588,
+      "not_held": 478
+    },
+    "recent_update_observed": {
+      "channels": 26457,
+      "held": 26430,
+      "not_held": 27
+    }
+  },
+  "second_observer": {
+    "captured_at": "2026-11-13T13:23:30Z",
+    "inputs": {
+      "export_report_sha256": "13b00ee58a46c09d02bbd61c9a3a4cb98808c75861dd336858918517daa2b639",
+      "manifest_sha256": "6d21e0d947f34cdd671c89ee5ae1829a4682bef82879d8ec21723bf9567d2c04",
+      "records_sha256": "30d384d04f1307733f2340456fd410102e255ad71638a67121fa1cf74c517977"
+    },
+    "reference": {
+      "hash": "000000000000000000017ad637b952700d5435291d5372aa9b34a0dcf374201c",
+      "height": 975677
+    }
+  }
+}

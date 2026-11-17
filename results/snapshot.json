@@ -1,0 +1,68 @@
+{
+  "age_cdf": {
+    "group": "recent_update_observed",
+    "minimum_row_count": 10,
+    "rows": 103,
+    "step_blocks": 4380
+  },
+  "backend": "bitcoind",
+  "captured_at": "2026-11-13T19:27:47Z",
+  "closed_index": {
+    "audit": {
+      "audited_at": "2026-11-13T19:28:44Z",
+      "not_in_utxo_set": 1,
+      "tip": {
+        "hash": "00000000000000000000cbab70bae2ddc53ee176abeb88da46efddebdb89fcf5",
+        "height": 975703
+      },
+      "unresolved": 0,
+      "unspent_at_audit": 0
+    },
+    "entries": 1,
+    "note": "Channels the observer marked closed are not exported. An entry whose funding output is still unspent at the audit is a live channel that the observer excluded."
+  },
+  "cohort": "local graph: authenticated v1 P2WSH, no nonzero channel feature bits",
+  "counts": {
+    "authenticated_announcements": 29814,
+    "distinct_funding_keys": 59604,
+    "update_recency": {
+      "no_recent_update_observed": {
+        "channels": 3285,
+        "channels_without_any_update": 3285,
+        "distinct_funding_keys": 6567
+      },
+      "note": "A channel has a recent update when either node's stored channel_update is dated within the window before the reference time. No recent update observed means this observer's LND held no such update. It does not establish that a channel is dormant or abandoned. LND removes channels whose updates are all older than the window, so this group mainly holds announcements without any stored update. Timestamps are as recorded by LND and are not re-verified offline. A reused funding key can count in both groups.",
+      "recent_update_observed": {
+        "channels": 26529,
+        "distinct_funding_keys": 53045
+      },
+      "reference_time": "2026-11-13T19:27:47Z",
+      "window_seconds": 1209600
+    }
+  },
+  "dataset_kind": "mainnet",
+  "excluded_records": 0,
+  "exclusions": {},
+  "exported_records": 29814,
+  "funding_output_age": {
+    "group": "recent_update_observed",
+    "interpretation": "Funding-output age at observation, not exposure duration or channel age.",
+    "median_tenths": 8,
+    "outputs_at_least_5_years": 2471,
+    "p90_tenths": 48,
+    "quantile_method": "nearest rank: sorted_values[ceil(n*p)-1]",
+    "unit": "tenths of a nominal year of 52,560 blocks, rounded to nearest, ties to even"
+  },
+  "included_records": 29814,
+  "inputs": {
+    "export_report_sha256": "4633da2cbcbefd52db3c6a4908c07a9cf76c328b07fee287168e66c26d3963d4",
+    "manifest_sha256": "dc2836ab625b0918a732950ce1e21848450eb8a3d6a2991c9123faeb998837e6",
+    "records_sha256": "2f02540111fbda01e9148f4a32b29163cce1e2e248f4bd42884a653ab01662d5"
+  },
+  "lnd_commit": "390b2d2b7bdcc335c183962e483f5daeceb8f0e7",
+  "reference": {
+    "hash": "00000000000000000000cbab70bae2ddc53ee176abeb88da46efddebdb89fcf5",
+    "height": 975703
+  },
+  "schema_version": 1
+}

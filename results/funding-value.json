@@ -1,0 +1,58 @@
+{
+  "by_update_recency": {
+    "no_recent_update_observed": {
+      "funding_value_btc": "28.19706612",
+      "funding_value_satoshis": 2819706612,
+      "outputs": 3285
+    },
+    "recent_update_observed": {
+      "funding_value_btc": "3167.61403143",
+      "funding_value_satoshis": 316761403143,
+      "outputs": 26529
+    },
+    "window_seconds": 1209600
+  },
+  "captured_at": "2026-11-13T19:27:47Z",
+  "core_audit": {
+    "blocks_scanned_after_reference": 80,
+    "confirmed_unspent_at_reference": {
+      "funding_value_btc": "3195.81109755",
+      "funding_value_satoshis": 319581109755,
+      "outputs": 29814
+    },
+    "finished_at": "2026-11-14T10:57:35Z",
+    "outputs_by_state": {
+      "not_shown": 0,
+      "spent_after_reference": 135,
+      "unspent_when_checked": 29679
+    },
+    "outputs_checked": 29814,
+    "scope": "scripts_values_and_unspentness_at_reference",
+    "started_at": "2026-11-14T10:56:01Z",
+    "tip_end": {
+      "hash": "000000000000000000002c7d2542a2b1fb24bf1009d35721a25ca0a936183af8",
+      "height": 975783
+    },
+    "tip_start": {
+      "hash": "000000000000000000002c7d2542a2b1fb24bf1009d35721a25ca0a936183af8",
+      "height": 975783
+    }
+  },
+  "dataset_kind": "mainnet",
+  "funding_value_btc": "3195.81109755",
+  "funding_value_satoshis": 319581109755,
+  "included_outputs": 29814,
+  "inputs": {
+    "export_report_sha256": "4633da2cbcbefd52db3c6a4908c07a9cf76c328b07fee287168e66c26d3963d4",
+    "final_sample_sha256": "75b3b7429e7ced1c620ca10875194e551c5af71654d27891b0b62da9230f4eb9",
+    "manifest_sha256": "dc2836ab625b0918a732950ce1e21848450eb8a3d6a2991c9123faeb998837e6",
+    "records_sha256": "2f02540111fbda01e9148f4a32b29163cce1e2e248f4bd42884a653ab01662d5"
+  },
+  "interpretation": "Funding value of the snapshot's announcements, each funding output counted once. It is what the announced keys guard if both private keys of an output are recovered while the output is still spendable under them. It is not a network census, a demonstrated attack or a forecast of losses. The audit shows output by output that the output was unspent at the reference block: it was either still unspent when checked, or the input that spent it lies in a later block.",
+  "reference": {
+    "hash": "00000000000000000000cbab70bae2ddc53ee176abeb88da46efddebdb89fcf5",
+    "height": 975703
+  },
+  "schema_version": 1,
+  "value_source": "matched_per_output_lnd_capacities"
+}

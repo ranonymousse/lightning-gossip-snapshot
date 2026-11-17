@@ -1,0 +1,25 @@
+[Application Options]
+nolisten=true
+rpclisten=127.0.0.1:11009
+restlisten=127.0.0.1:11080
+numgraphsyncpeers=3
+
+[Bitcoin]
+bitcoin.mainnet=true
+bitcoin.node=bitcoind
+
+[Bitcoind]
+bitcoind.rpchost=127.0.0.1:11332
+bitcoind.rpccookie=COOKIE_PATH
+bitcoind.rpcpolling=true
+
+[db]
+db.backend=bolt
+db.use-native-sql=false
+
+[routing]
+routing.assumechanvalid=false
+routing.strictgraphpruning=false
+
+[gossip]
+gossip.ban-threshold=0

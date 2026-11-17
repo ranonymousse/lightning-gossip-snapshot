@@ -1,0 +1,42 @@
+[project]
+name = "gossip-snapshot"
+version = "0.1.0"
+description = "Collection and analysis of authenticated Lightning gossip snapshots"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.12,<3.15"
+dependencies = [
+  "coincurve>=21,<22",
+  "matplotlib>=3.10,<4",
+  "pydantic>=2.12,<3",
+  "rich>=14,<15",
+  "typer>=0.20,<1",
+]
+
+[project.scripts]
+gossip = "gossip_snapshot.cli:main"
+
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = ["pytest>=8.4,<10", "ruff>=0.14,<1"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "D100", "D101", "D102", "D103"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["D"]
+"scripts/*" = ["D"]
+# These two files are kept byte-identical to the revision that collected the published capture.
+"src/gossip_snapshot/verification.py" = ["D"]
+"src/gossip_snapshot/wire.py" = ["D"]

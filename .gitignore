@@ -1,0 +1,17 @@
+.venv/
+.cache/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+bin/
+captures/
+output/
+.DS_Store
+*.db
+*.db-*
+*.macaroon
+*.key
+*.pem

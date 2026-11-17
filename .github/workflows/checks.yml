@@ -1,0 +1,32 @@
+name: checks
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      # The lock file must match pyproject.toml, and everything below uses it.
+      - run: uv lock --check
+      - run: ./run.sh sync
+      - run: ./run.sh test
+      # The figure and the number macros come from results/ alone.
+      - run: ./run.sh reproduce
+
+  exporter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: ./run.sh sync
+      # Clones LND at the pinned revision, runs the exporter's round-trip test on a
+      # synthetic graph database, checks the exported bytes in Python and compiles it.
+      - run: ./run.sh build

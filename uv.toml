@@ -1,0 +1,2 @@
+# Keep uv's download/build cache inside this project, alongside its local .venv.
+cache-dir = ".cache/uv"

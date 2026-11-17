@@ -1,0 +1,94 @@
+{
+  "captured_at": "2026-11-13T19:27:47Z",
+  "dataset_kind": "mainnet",
+  "included_records": 29814,
+  "inputs": {
+    "manifest_sha256": "dc2836ab625b0918a732950ce1e21848450eb8a3d6a2991c9123faeb998837e6",
+    "session_result_sha256": "95fda58ab50611c187428c70398c0947f3fadbbcb7e1eb5b613ae97de71fbf6e"
+  },
+  "readiness": {
+    "churn": [
+      0.000402441478301697,
+      6.707807888382076e-05
+    ],
+    "ready": true,
+    "rule": {
+      "maximum_churn": 0.01,
+      "minimum_interval_seconds": 1800,
+      "minimum_peers": 3,
+      "observations": 3
+    }
+  },
+  "reference": {
+    "hash": "00000000000000000000cbab70bae2ddc53ee176abeb88da46efddebdb89fcf5",
+    "height": 975703
+  },
+  "schema_version": 1,
+  "session": {
+    "debug_log": true,
+    "limits": {
+      "hours": 12.0,
+      "max_data_gb": 60.0,
+      "max_download_gb": 50.0,
+      "min_free_gb": 10.0
+    },
+    "stopped_at_readiness": true
+  },
+  "sync_coverage": [
+    {
+      "advertised": 26523,
+      "new": 26523,
+      "queried": 1000
+    },
+    {
+      "advertised": 26524,
+      "new": 25829,
+      "queried": 1000
+    },
+    {
+      "advertised": null,
+      "new": null,
+      "queried": 0
+    },
+    {
+      "advertised": 26521,
+      "new": 25518,
+      "queried": 1500
+    },
+    {
+      "advertised": 26527,
+      "new": 24674,
+      "queried": 500
+    },
+    {
+      "advertised": 26528,
+      "new": 24177,
+      "queried": 1000
+    },
+    {
+      "advertised": 26524,
+      "new": 23179,
+      "queried": 1000
+    },
+    {
+      "advertised": 26525,
+      "new": 22192,
+      "queried": 1000
+    },
+    {
+      "advertised": null,
+      "new": null,
+      "queried": 0
+    },
+    {
+      "advertised": 26521,
+      "new": 21347,
+      "queried": 21347
+    },
+    {
+      "advertised": 26524,
+      "new": 4,
+      "queried": 4
+    }
+  ]
+}
