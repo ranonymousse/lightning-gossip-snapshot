@@ -3,8 +3,9 @@
 The manuscript inputs the file once and names each reported value by its macro, so a new
 capture replaces every number in one step. Only published aggregates are read: the
 snapshot counts, the audited funding value, the session's readiness and synchronization
-coverage, and the comparison with a second observer. Counts and value cover every
-announcement, ages the announcements with a recent update observed. Method constants (the
+coverage, and the comparison with a second observer. Counts, keys and value are given for
+every announcement and for the announcements with a recent update observed, ages for the
+latter alone. Method constants (the
 14-day update window, the 52,560-block nominal year) stay in the prose, and so does
 anything that is known from private logs alone.
 """
@@ -189,6 +190,16 @@ def numbers_text(results: dict, *, synthetic: bool = False) -> tuple[str, dict]:
             "RecentAnnouncements",
             number(recency[RECENCY[0]]["channels"]),
             "announcements with a recent update observed",
+        ),
+        (
+            "RecentFundingKeys",
+            number(recency[RECENCY[0]]["distinct_funding_keys"]),
+            "their distinct funding keys",
+        ),
+        (
+            "RecentValueBTC",
+            number((recent_value + SATOSHIS_PER_BTC // 2) // SATOSHIS_PER_BTC),
+            f"their funding value in whole BTC, exactly {recent_value} satoshis",
         ),
         (
             "RecentValueShare",

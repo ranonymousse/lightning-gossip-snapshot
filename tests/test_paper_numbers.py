@@ -160,6 +160,10 @@ def test_every_reported_value_becomes_one_macro(results):
         # 110.00006105 BTC, of which the hundred recent channels hold 90.9%.
         "ValueBTC": "\\num{110}",
         "RecentAnnouncements": "\\num{100}",
+        # The shared funding key and one further key per recent announcement, and their
+        # 100.00005050 BTC.
+        "RecentFundingKeys": "\\num{101}",
+        "RecentValueBTC": "\\num{100}",
         "RecentValueShare": "90\\%",
         "NoRecentAnnouncements": "\\num{10}",
         # 100,000 blocks are 1.90 and 300,000 blocks 5.71 nominal years of 52,560 blocks.
